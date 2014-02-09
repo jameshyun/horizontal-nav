@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Vertical Navigation</title>
+		<style>
+			/**
+			 * For modern browsers
+			 * 1. The space content is one way to avoid an Opera bug when the
+			 *    contenteditable attribute is included anywhere else in the document.
+			 *    Otherwise it causes space to appear at the top and bottom of elements
+			 *    that are clearfixed.
+			 * 2. The use of `table` rather than `block` is only necessary if using
+			 *    `:before` to contain the top-margins of child elements.
+			 */
+			.cf:before,
+			.cf:after {
+			    content: " "; /* 1 */
+			    display: table; /* 2 */
+			}
+
+			.cf:after {
+			    clear: both;
+			}
+
+			/**
+			 * For IE 6/7 only
+			 * Include this rule to trigger hasLayout and contain floats.
+			 */
+			.cf {
+			    *zoom: 1;
+			}
+			nav {
+				background: #916A31;
+				height: 2.3em;
+			}
+			ul, li {
+				margin:0; padding: 0;
+				list-style: none;
+				float: left;
+			}
+
+			ul {
+				background:#D5973C;
+				height: 2em;
+				width: 100%;
+			}
+
+			li a {
+				display: block;
+				line-height: 2em;				
+				padding: 0 1em;
+				color: #fff;
+				text-decoration: none;
+			}
+			
+			li a:hover {
+				background: #916A31;
+				height: 2em;
+				padding-top: .3em;
+				position: relative;
+				top: -.3em;
+				border-radius: .3em .3em 0 0;
+			}
+			li:last-child a {
+			}
+
+			.current, a:hover.current {
+				background: #AD9B7F;
+				color: #eee;
+				padding-top: .3em;
+				position: relative;
+				top: -.3em;
+				border-radius: .3em .3em 0 0;
+				border-bottom: .3em solid #917F63;
+				cursor: default;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="cf">
+			<ul>
+				<li><a href="" title="" class="current">home</a></li>
+				<li><a href="" title="">products</a></li>
+				<li><a href="" title="">blog</a></li>
+				<li><a href="" title="">about</a></li>
+				<li><a href="" title="">contact</a></li>
+			</ul>
+		</nav>		
+	</body>
+</html>
